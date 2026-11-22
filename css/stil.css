@@ -4,7 +4,7 @@
 
 :root {
     --ana-renk: #2c221e;     
-    --vurgu-renk: #c2410c;   
+    --vurgu-renk: #b45309;   
     --baglanti-renk: #9a3412;
     --zemin: #f5f2eb;        
     --metin: #44403c;        
@@ -26,6 +26,7 @@ h1,h2{
 
 a{
     color: var(--baglanti-renk);
+    text-decoration: none;
 }
 
 a:hover{
@@ -72,32 +73,71 @@ th {
     background-color: #f5efe6;
 }
 
+
 /* Menü Tasarımı */
-header nav {
-    background-color: #2c3e50;
-    margin-top: 15px;
-    border-radius: 4px;
+
+header {
+    display: flex; /*flexbox duzeni*/
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px; /* kutuların birbirine yapismasini engeller*/
+    padding: 12px 24px;
+    background-color: #4a778c; /*sitenin paletine uygun, şık ve uyumlu bir mavi tonu */
+    border-radius: 6px;
 }
 
-header nav ul {
-    list-style-type: none; 
-    text-align: center;    
+header h1{
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
 }
 
-header nav ul li {
-    display: inline-block; 
-    margin: 15px;        
+nav{
+    margin-left: auto; 
 }
 
-header nav ul li a {
-    color: #ffffff;       
-    text-decoration: none; 
-    font-weight: bold;
-    font-size: 15px;
-    padding: 5px 10px;
+nav ul{
+    display: flex; /*liste elemanlarini yan yana dizer*/
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-header nav ul li a:hover {
-    color: #1abc9c;        
+nav a{
+    display: block;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
 }
 
+nav a:hover{
+    background-color: #2c5263; 
+    color: white;
+}
+
+/* Sectionlari flexbox kutularına donusturme */
+section {
+    display: flex;
+    flex-direction: column; /* icindeki tabloları alt alta duzenli bir sekilde dizer */
+    gap: 16px; 
+    background-color: #f5efe6; /* kutunun arkaplani */
+    border: 1px solid var(--kenar);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+li{
+    list-style: none; /* madde işaretlerini kaldirir */
+    padding: 0;
+    margin: 0;
+}
